@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.EditTargetController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="568.0" prefWidth="809.0">
+         <children>
+            <ToolBar fx:id="menu" prefHeight="40.0" prefWidth="704.0">
+               <items>
+                  <Button fx:id="pageLogin" mnemonicParsing="false" onAction="#goLoginPage" text="Авторизация" />
+                  <Button fx:id="pageRegist" mnemonicParsing="false" onAction="#goRegistPage" text="Регистрация" />
+                  <Button fx:id="pageTargets" mnemonicParsing="false" onAction="#goTargetsPage" text="Мои цели" />
+                  <Button fx:id="pageChart" mnemonicParsing="false" onAction="#goChartPage" text="График" />
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#goLogout" text="Выйти" />
+               </items>
+            </ToolBar>
+            <Label text="Редактирование цели">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="TOP_CENTER" prefHeight="371.0" prefWidth="748.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="nameTarget" prefHeight="25.0" prefWidth="188.0" promptText="Название цели" />
+                  <TextArea fx:id="descTarget" prefHeight="200.0" prefWidth="200.0" promptText="Опишите вашу цель" />
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="744.0">
+                     <children>
+                        <Label text="Желаемая дата достижения:" />
+                        <DatePicker fx:id="dateTarget" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="744.0">
+                     <children>
+                        <Label text="Выберите группу:">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="groupTarget" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="editBtn" mnemonicParsing="false" onAction="#doEditTarget" text="Редактировать" />
+                  <TextArea fx:id="errorField" editable="false" prefHeight="179.0" prefWidth="748.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

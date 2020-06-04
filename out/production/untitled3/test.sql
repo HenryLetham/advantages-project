@@ -1,0 +1,2 @@
+INSERT INTO `target`.`users` (`name`, `surname`, `email`, `password`) VALUES ('Лена', 'Тополева', 'lena@mail.ru', 'cruidlena');
+INSERT INTO `target`.`users` (`name`, `surname`, `email`, `password`) VALUES ('Alina', 'Demidovna', 'renat@mail.ru', 'lista');

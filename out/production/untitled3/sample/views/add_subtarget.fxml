@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddSubStageController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="568.0" prefWidth="809.0">
+         <children>
+            <ToolBar fx:id="menu" prefHeight="40.0" prefWidth="704.0">
+               <items>
+                  <Button fx:id="pageLogin" mnemonicParsing="false" onAction="#goLoginPage" text="Авторизация" />
+                  <Button fx:id="pageRegist" mnemonicParsing="false" onAction="#goRegistPage" text="Регистрация" />
+                  <Button fx:id="pageTargets" mnemonicParsing="false" onAction="#goTargetsPage" text="Мои цели" />
+                  <Button fx:id="pageChart" mnemonicParsing="false" onAction="#goChartPage" text="График" />
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#goLogout" text="Выйти" />
+               </items>
+            </ToolBar>
+            <Label text="Добавление подцели">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="TOP_CENTER" prefHeight="371.0" prefWidth="748.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="nameSubTarget" prefHeight="25.0" prefWidth="188.0" promptText="Название подцели" />
+                  <TextArea fx:id="descSubTarget" prefHeight="200.0" prefWidth="200.0" promptText="Опишите вашу подцель" />
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="744.0">
+                     <children>
+                        <Label text="Желаемая дата достижения:" />
+                        <DatePicker fx:id="dateSubTarget" editable="false" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addSubTarget" text="Добавить" />
+                  <TextArea fx:id="errorField" editable="false" prefHeight="179.0" prefWidth="748.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

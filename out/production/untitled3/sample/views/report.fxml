@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="760.0" prefWidth="1239.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ReportTargetController">
+   <children>
+      <AnchorPane id="menuWrapp" fx:id="menuWrapp" prefHeight="43.0" prefWidth="486.0">
+         <children>
+            <ToolBar fx:id="menu" prefHeight="40.0" prefWidth="457.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <items>
+                  <Button fx:id="pageLogin" mnemonicParsing="false" onAction="#goLoginPage" text="Авторизация" />
+                  <Button fx:id="pageRegist" mnemonicParsing="false" onAction="#goRegistPage" text="Регистрация" />
+                  <Button fx:id="pageTargets" mnemonicParsing="false" onAction="#goTargetsPage" text="Мои цели" />
+                  <Button fx:id="pageChart" mnemonicParsing="false" onAction="#goChartPage" text="График" />
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#goLogout" text="Выйти" />
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+      <Label text="График по выполненным целям">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="chartTarget" prefHeight="502.0" prefWidth="1199.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

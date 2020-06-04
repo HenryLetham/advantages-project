@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="470.0" prefWidth="676.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.LoginController">
+    <children>
+        <AnchorPane id="menuWrapp" fx:id="menuWrapp" prefHeight="43.0" prefWidth="486.0">
+           <children>
+               <ToolBar fx:id="menu" prefHeight="40.0" prefWidth="457.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+                   <items>
+                       <Button fx:id="pageLogin" mnemonicParsing="false" onAction="#goLoginPage" text="Авторизация" />
+                       <Button fx:id="pageRegist" mnemonicParsing="false" onAction="#goRegistPage" text="Регистрация" />
+                       <Button fx:id="pageTargets" mnemonicParsing="false" onAction="#goTargetsPage" text="Мои цели" visible="false" />
+                       <Button fx:id="pageChart" mnemonicParsing="false" onAction="#goChartPage" text="График" visible="false" />
+                       <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#goLogout" text="Выйти" visible="false" />
+                  <Button mnemonicParsing="false" text="Выйти" visible="false" />
+   
+                   </items>
+               </ToolBar>
+           </children>
+        </AnchorPane>
+        <Label text="Авторизация">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <VBox alignment="CENTER" prefHeight="209.0" prefWidth="491.0" spacing="20.0">
+            <children>
+                <TextField fx:id="email" prefHeight="25.0" prefWidth="497.0" promptText="Введите логин" />
+                <TextField fx:id="password" prefHeight="25.0" prefWidth="455.0" promptText="Введите пароль" />
+            <Button fx:id="doLogin" mnemonicParsing="false" onAction="#doLogin" text="Авторизоваться" />
+            <TextArea fx:id="errorFields" editable="false" prefHeight="98.0" prefWidth="491.0" />
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

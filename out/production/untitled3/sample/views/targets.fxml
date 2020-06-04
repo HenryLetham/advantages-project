@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="695.0" prefWidth="1239.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.TargetController">
+   <children>
+      <AnchorPane id="menuWrapp" fx:id="menuWrapp" prefHeight="43.0" prefWidth="486.0">
+         <children>
+            <ToolBar fx:id="menu" prefHeight="40.0" prefWidth="457.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <items>
+                  <Button fx:id="pageLogin" mnemonicParsing="false" onAction="#goLoginPage" text="Авторизация" />
+                  <Button fx:id="pageRegist" mnemonicParsing="false" onAction="#goRegistPage" text="Регистрация" />
+                  <Button fx:id="pageTargets" mnemonicParsing="false" onAction="#goTargetsPage" text="Мои цели" />
+                  <Button fx:id="pageChart" mnemonicParsing="false" onAction="#goChartPage" text="График" />
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#goLogout" text="Выйти" />
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="396.0" prefWidth="149.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addGroup" mnemonicParsing="false" onAction="#addGroup" text="Добавить группу">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="addTarget" mnemonicParsing="false" onAction="#addTarget" text="Добавить цель" />
+                  <VBox fx:id="wrappGroups" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Группы:" />
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <BorderPane prefHeight="469.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+               <top>
+                  <ScrollPane prefHeight="275.0" prefWidth="788.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="782.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="144.0" text="Активные цели" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox fx:id="unreachTargetWrapp" prefHeight="230.0" prefWidth="782.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </top>
+               <bottom>
+                  <ScrollPane prefHeight="300.0" prefWidth="791.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="299.0" prefWidth="779.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="184.0" text="Выполненные цели" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <VBox fx:id="reachTargetWrapp" prefHeight="200.0" prefWidth="701.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </bottom>
+            </BorderPane>
+         </center>
+         <right>
+            <VBox prefHeight="575.0" prefWidth="208.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="showTargetsBtn" mnemonicParsing="false" onAction="#showTargetsByPeriod" prefHeight="48.0" prefWidth="188.0" text="Показать цели (За период)">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <VBox fx:id="wrappGroups1" prefHeight="277.0" prefWidth="208.0" spacing="5.0">
+                     <children>
+                        <Label text="Начало периода" />
+                        <DatePicker fx:id="dateStart" editable="false" />
+                        <Label text="Конец периода" />
+                        <DatePicker fx:id="dateEnd" editable="false" />
+                        <TextArea fx:id="errorFields" editable="false" prefHeight="136.0" prefWidth="129.0">
+                           <VBox.margin>
+                              <Insets right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
